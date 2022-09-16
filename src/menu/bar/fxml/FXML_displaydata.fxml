@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="541.0" prefWidth="881.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menu.bar.fxml.FXML_displaydataController">
+   <children>
+      <TableView fx:id="tbsiswa" layoutY="67.0" prefHeight="404.0" prefWidth="881.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+      <Label layoutX="168.0" layoutY="14.0" text="DATA MAHASISWA STMIK XYZ">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="btntambahsiswa" defaultButton="true" layoutX="14.0" layoutY="489.0" mnemonicParsing="false" onAction="#btntambahklik" text="TAMBAH" textFill="WHITE" />
+      <Button fx:id="btneditsiswa" defaultButton="true" layoutX="105.0" layoutY="489.0" mnemonicParsing="false" onAction="#btneditklik" text="EDIT" textFill="WHITE" />
+      <Button fx:id="btnhapussiswa" cancelButton="true" layoutX="168.0" layoutY="489.0" mnemonicParsing="false" onAction="#btnhapusklik" text="HAPUS" />
+      <Button fx:id="btnawal" layoutX="582.0" layoutY="489.0" mnemonicParsing="false" onAction="#btnawalklik" text="Awal" />
+      <Button fx:id="akhir" layoutX="641.0" layoutY="489.0" mnemonicParsing="false" onAction="#btnakhirklik" text="Akhir" />
+      <Button fx:id="btnsebelum" layoutX="704.0" layoutY="489.0" mnemonicParsing="false" onAction="#btnsebelumklik" text="Sebelum" />
+      <Button fx:id="btnsesudah" layoutX="791.0" layoutY="489.0" mnemonicParsing="false" onAction="#btnsesudahklik" text="Sesudah" />
+      <Button fx:id="btnexit" layoutX="818.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnexitklik" text="EXIT" />
+   </children>
+</AnchorPane>

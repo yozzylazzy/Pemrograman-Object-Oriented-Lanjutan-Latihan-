@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="menu.bar.fxml.FXML_InputMatkulController">
+   <children>
+      <Button fx:id="btnexit" layoutX="473.0" layoutY="294.0" mnemonicParsing="false" onAction="#btnexitklik" text="Exit" />
+      <Button fx:id="btnreset" layoutX="405.0" layoutY="294.0" mnemonicParsing="false" onAction="#btnresetklik" text="Reset" />
+      <Button fx:id="btnsimpan" layoutX="321.0" layoutY="294.0" mnemonicParsing="false" onAction="#btnsimpanklik" text="Simpan" />
+      <TextField fx:id="txtsks" layoutX="295.0" layoutY="183.0" prefHeight="31.0" prefWidth="222.0" />
+      <TextField fx:id="txtnamamk" layoutX="295.0" layoutY="132.0" prefHeight="31.0" prefWidth="222.0" />
+      <TextField fx:id="txtkodemk" layoutX="295.0" layoutY="82.0" prefHeight="31.0" prefWidth="222.0" />
+      <Label layoutX="118.0" layoutY="188.0" text="SKS" />
+      <Label layoutX="118.0" layoutY="137.0" text="NamaMK" />
+      <Label layoutX="118.0" layoutY="87.0" text="KodeMK" />
+      <Label layoutX="118.0" layoutY="237.0" text="Praktek" />
+      <TextField fx:id="txtpraktek" layoutX="295.0" layoutY="232.0" prefHeight="31.0" prefWidth="222.0" />
+   </children>
+</AnchorPane>

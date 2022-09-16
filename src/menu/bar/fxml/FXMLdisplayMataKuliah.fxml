@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="543.0" prefWidth="892.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menu.bar.fxml.FXMLdisplayMataKuliahController">
+   <children>
+      <TableView fx:id="tbmatakuliah" layoutY="77.0" prefHeight="408.0" prefWidth="892.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnexit" layoutX="828.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnexitklik" text="EXIT" />
+      <Button fx:id="btnsesudah" layoutX="801.0" layoutY="499.0" mnemonicParsing="false" onAction="#btnsesudahklik" text="Sesudah" />
+      <Button fx:id="btnsebelum" layoutX="714.0" layoutY="499.0" mnemonicParsing="false" onAction="#btnsebelumklik" text="Sebelum" />
+      <Button fx:id="akhir" layoutX="651.0" layoutY="499.0" mnemonicParsing="false" onAction="#btnakhirklik" text="Akhir" />
+      <Button fx:id="btnawal" layoutX="592.0" layoutY="499.0" mnemonicParsing="false" onAction="#btnawalklik" text="Awal" />
+      <Label layoutX="174.0" layoutY="13.0" text="DATA MATAKULIAH STMIK XYZ">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnhapussiswa" cancelButton="true" layoutX="168.0" layoutY="499.0" mnemonicParsing="false" onAction="#btnhapusklik" text="HAPUS" />
+      <Button fx:id="btneditsiswa" defaultButton="true" layoutX="105.0" layoutY="499.0" mnemonicParsing="false" onAction="#btneditklik" text="EDIT" textFill="WHITE" />
+      <Button fx:id="btntambahsiswa" defaultButton="true" layoutX="14.0" layoutY="499.0" mnemonicParsing="false" onAction="#btntambahklik" text="TAMBAH" textFill="WHITE" />
+   </children>
+</AnchorPane>

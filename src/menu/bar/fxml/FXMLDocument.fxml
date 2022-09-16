@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menu.bar.fxml.FXMLDocumentController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <MenuBar prefHeight="32.0" prefWidth="320.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Master">
+            <items>
+              <MenuItem fx:id="mastersiswa" mnemonicParsing="false" onAction="#mastersiswaclick" text="Siswa" />
+                  <MenuItem fx:id="mastermatakuliah" mnemonicParsing="false" onAction="#mastermatakuliahclick" text="MataKuliah" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Transaksi">
+            <items>
+              <MenuItem fx:id="transaksinilai" mnemonicParsing="false" onAction="#transaksinilaiclick" text="Penilaian" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Display">
+            <items>
+              <MenuItem fx:id="displaysiswa" mnemonicParsing="false" onAction="#displaysiswaclick" text="Siswa" />
+                  <MenuItem fx:id="displaymatakuliah" mnemonicParsing="false" onAction="#displaymatakuliahclick" text="MataKuliah" />
+                  <MenuItem fx:id="displaynilai" mnemonicParsing="false" onAction="#displaynilaiclick" text="Penilaian" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Keluar">
+              <items>
+                <MenuItem fx:id="exit" mnemonicParsing="false" onAction="#exitclick" text="Keluar" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <ImageView fitHeight="168.0" fitWidth="320.0" layoutX="76.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@git.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="20.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INI HALAMAN HOME KAMPUS XYZ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+    </children>
+</AnchorPane>

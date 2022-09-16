@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menu.bar.fxml.FXML_InputNilaiController">
+   <children>
+      <TextField fx:id="txtnilai" layoutX="278.0" layoutY="229.0" prefHeight="31.0" prefWidth="222.0" />
+      <Label layoutX="101.0" layoutY="234.0" text="Nilai" />
+      <Label layoutX="101.0" layoutY="84.0" text="NPM" />
+      <Label layoutX="101.0" layoutY="134.0" text="KodeMK" />
+      <Label layoutX="101.0" layoutY="185.0" text="Tanggal" />
+      <TextField fx:id="txtnpm" layoutX="278.0" layoutY="79.0" prefHeight="31.0" prefWidth="222.0" />
+      <TextField fx:id="txtkodemk" layoutX="278.0" layoutY="129.0" prefHeight="31.0" prefWidth="222.0" />
+      <Button fx:id="btnsimpan" layoutX="304.0" layoutY="322.0" mnemonicParsing="false" onAction="#btnsimpanklik" text="Simpan" />
+      <Button fx:id="btnreset" layoutX="388.0" layoutY="322.0" mnemonicParsing="false" onAction="#btnresetklik" text="Reset" />
+      <Button fx:id="btnexit" layoutX="456.0" layoutY="322.0" mnemonicParsing="false" onAction="#btnexitklik" text="Exit" />
+      <Label layoutX="101.0" layoutY="281.0" text="Hadir" />
+      <DatePicker fx:id="datepick" layoutX="277.0" layoutY="180.0" prefHeight="31.0" prefWidth="222.0" />
+      <Slider fx:id="sldhadir" layoutX="277.0" layoutY="283.0" max="28.0" prefHeight="18.0" prefWidth="222.0" />
+      <Text fx:id="txtsld" layoutX="511.0" layoutY="297.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
+   </children>
+</AnchorPane>
