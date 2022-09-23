@@ -15,6 +15,7 @@ public class NilaiModel {
     private Date Tanggal;
     private double nilai;
     private int hadir;
+    private char na;
 
     public String getNPM() {
         return NPM;
@@ -54,6 +55,22 @@ public class NilaiModel {
 
     public void setHadir(int hadir) {
         this.hadir = hadir;
+    }
+    
+    public char getNa(){
+        if(nilai>=85){
+            na='a';
+        } else if (nilai>=75){
+            na = 'b';
+        } else if (nilai>=60){
+            na = 'c';
+        } else if (nilai>=40){
+            na = 'd';
+        } else {
+            na = 'e';
+        }
+        
+        return (na);
     }
     
 }

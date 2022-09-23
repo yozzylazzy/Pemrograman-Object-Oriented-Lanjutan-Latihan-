@@ -28,5 +28,6 @@
       <Button fx:id="btnsebelum" layoutX="720.0" layoutY="482.0" mnemonicParsing="false" onAction="#btnsebelumklik" text="Sebelum" />
       <Button fx:id="btnsesudah" layoutX="807.0" layoutY="482.0" mnemonicParsing="false" onAction="#btnsesudahklik" text="Sesudah" />
       <Button fx:id="btnexit" layoutX="825.0" layoutY="24.0" mnemonicParsing="false" onAction="#btnexitklik" text="EXIT" />
+      <TextField fx:id="txttotal" layoutX="339.0" layoutY="476.0" />
    </children>
 </AnchorPane>

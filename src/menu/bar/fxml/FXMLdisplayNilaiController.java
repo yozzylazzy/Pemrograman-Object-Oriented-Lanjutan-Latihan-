@@ -21,6 +21,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -50,6 +51,8 @@ public class FXMLdisplayNilaiController implements Initializable {
     private Button btnsesudah;
     @FXML
     private Button btnexit;
+    @FXML
+    private TextField txttotal;
 
     /**
      * Initializes the controller class.
@@ -85,7 +88,18 @@ public class FXMLdisplayNilaiController implements Initializable {
             col = new TableColumn("Hadir");
             col.setCellValueFactory(new PropertyValueFactory<NilaiModel, Integer>("Hadir"));
             tbnilai.getColumns().addAll(col);
+            
+            col=new TableColumn("NA");
+            col.setCellValueFactory(new PropertyValueFactory<NilaiModel, String>("Na"));
+            tbnilai.getColumns().addAll(col);
             tbnilai.setItems(data);
+            
+            int total=0;
+            for(int i = 0; i<tbnilai.getItems().size();i++){
+                NilaiModel n = tbnilai.getItems().get(i);
+                total+= n.getHadir();
+            }
+            txttotal.setText(String.valueOf(total));
         } else {
             Alert a = new Alert(Alert.AlertType.ERROR, "Data Kosong", ButtonType.OK);
             a.showAndWait();
