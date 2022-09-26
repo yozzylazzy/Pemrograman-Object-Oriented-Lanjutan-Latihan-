@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="624.0" prefWidth="981.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="menu.bar.fxml.FXML_PilihSiswaController">
+   <children>
+      <TextField fx:id="txtisi" layoutX="338.0" layoutY="63.0" prefHeight="39.0" prefWidth="265.0" />
+      <Button fx:id="btncari" layoutX="618.0" layoutY="63.0" mnemonicParsing="false" onAction="#cariklik" text="Cari" />
+      <Button fx:id="btnpilih" layoutX="690.0" layoutY="63.0" mnemonicParsing="false" onAction="#pilihklik" text="Pilih" />
+      <Button fx:id="btnbatal" layoutX="760.0" layoutY="63.0" mnemonicParsing="false" onAction="#batalklik" text="Batal" />
+      <ComboBox fx:id="cmbfield" layoutX="17.0" layoutY="63.0" prefHeight="39.0" prefWidth="304.0" />
+      <Button fx:id="btnexit" layoutX="897.0" layoutY="63.0" mnemonicParsing="false" onAction="#btnexitklik" text="EXIT" />
+      <Button fx:id="btnsesudah" layoutX="864.0" layoutY="554.0" mnemonicParsing="false" onAction="#btnsesudahklik" text="Sesudah" />
+      <Button fx:id="btnsebelum" layoutX="777.0" layoutY="554.0" mnemonicParsing="false" onAction="#btnsebelumklik" text="Sebelum" />
+      <Button fx:id="akhir" layoutX="714.0" layoutY="554.0" mnemonicParsing="false" onAction="#btnakhirklik" text="Akhir" />
+      <Button fx:id="btnawal" layoutX="655.0" layoutY="554.0" mnemonicParsing="false" onAction="#btnawalklik" text="Awal" />
+      <Button fx:id="btnhapussiswa" cancelButton="true" layoutX="171.0" layoutY="554.0" mnemonicParsing="false" onAction="#btnhapusklik" text="HAPUS" />
+      <Button fx:id="btneditsiswa" defaultButton="true" layoutX="108.0" layoutY="554.0" mnemonicParsing="false" onAction="#btneditklik" text="EDIT" textFill="WHITE" />
+      <Button fx:id="btntambahsiswa" defaultButton="true" layoutX="17.0" layoutY="554.0" mnemonicParsing="false" onAction="#btntambahklik" text="TAMBAH" textFill="WHITE" />
+      <TableView fx:id="tbsiswa" layoutX="3.0" layoutY="132.0" prefHeight="404.0" prefWidth="978.0">
+         <columns>
+            <TableColumn prefWidth="75.0" text="C1" />
+            <TableColumn prefWidth="75.0" text="C2" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

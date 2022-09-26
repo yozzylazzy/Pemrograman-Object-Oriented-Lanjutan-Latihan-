@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="523.0" prefWidth="1010.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="menu.bar.fxml.FXML_PilihMatkulController">
+   <children>
+      <Button fx:id="btnexit" layoutX="907.0" layoutY="39.0" mnemonicParsing="false" onAction="#btnexitklik" text="EXIT" />
+      <ComboBox fx:id="cmbfield" layoutX="27.0" layoutY="39.0" prefHeight="39.0" prefWidth="304.0" />
+      <Button fx:id="btnbatal" layoutX="770.0" layoutY="39.0" mnemonicParsing="false" onAction="#batalklik" text="Batal" />
+      <Button fx:id="btnpilih" layoutX="700.0" layoutY="39.0" mnemonicParsing="false" onAction="#pilihklik" text="Pilih" />
+      <Button fx:id="btncari" layoutX="628.0" layoutY="39.0" mnemonicParsing="false" onAction="#cariklik" text="Cari" />
+      <TextField fx:id="txtisi" layoutX="348.0" layoutY="39.0" prefHeight="39.0" prefWidth="265.0" />
+      <AnchorPane id="AnchorPane" layoutX="44.0" layoutY="78.0" prefHeight="543.0" prefWidth="892.0">
+         <children>
+            <TableView fx:id="tbmatakuliah" layoutX="-18.0" layoutY="21.0" prefHeight="408.0" prefWidth="943.0">
+               <columns>
+                  <TableColumn prefWidth="75.0" text="C1" />
+                  <TableColumn prefWidth="75.0" text="C2" />
+               </columns>
+            </TableView>
+            <Button fx:id="btnsesudah" layoutX="640.0" layoutY="451.0" mnemonicParsing="false" onAction="#btnsesudahklik" text="Sesudah" />
+            <Button fx:id="btnsebelum" layoutX="256.0" layoutY="451.0" mnemonicParsing="false" onAction="#btnsebelumklik" text="Sebelum" />
+            <Button fx:id="akhir" layoutX="859.0" layoutY="451.0" mnemonicParsing="false" onAction="#btnakhirklik" text="Akhir" />
+            <Button fx:id="btnawal" layoutX="-17.0" layoutY="451.0" mnemonicParsing="false" onAction="#btnawalklik" text="Awal" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

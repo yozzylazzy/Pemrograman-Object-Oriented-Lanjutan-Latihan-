@@ -130,4 +130,28 @@ public class DBMataKuliah {
         }
     }
 
+    public ObservableList<MataKuliahModel> LookUp(String fld, String dt) {
+        try {
+            ObservableList<MataKuliahModel> tableData = FXCollections.observableArrayList();
+            Koneksi con = new Koneksi();
+            con.bukaKoneksi();
+            con.statement = con.dbKoneksi.createStatement();
+            ResultSet rs = con.statement.executeQuery("Select KodeMK, NamaMK, SKS, Praktek from matakuliah where " + fld + " like '%" + dt + "%'");
+            int i = 1;
+            while (rs.next()) {
+                MataKuliahModel d = new MataKuliahModel();
+                d.setKodeMK(rs.getString("KodeMK"));
+                d.setNamaMK(rs.getString("NamaMK"));
+                d.setSKS(rs.getInt("SKS"));
+                d.setPraktek(rs.getInt("Praktek"));
+                tableData.add(d);
+                i++;
+            }
+            con.tutupKoneksi();
+            return tableData;
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            return null;
+        }
+    }
 }

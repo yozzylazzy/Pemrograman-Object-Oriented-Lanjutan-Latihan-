@@ -7,7 +7,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menu.bar.fxml.FXML_InputNilaiController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="675.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menu.bar.fxml.FXML_InputNilaiController">
    <children>
       <TextField fx:id="txtnilai" layoutX="278.0" layoutY="229.0" prefHeight="31.0" prefWidth="222.0" />
       <Label layoutX="101.0" layoutY="234.0" text="Nilai" />
@@ -23,5 +23,7 @@
       <DatePicker fx:id="datepick" layoutX="277.0" layoutY="180.0" prefHeight="31.0" prefWidth="222.0" />
       <Slider fx:id="sldhadir" layoutX="277.0" layoutY="283.0" max="28.0" prefHeight="18.0" prefWidth="222.0" />
       <Text fx:id="txtsld" layoutX="511.0" layoutY="297.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
+      <Button fx:id="btnpilihsiswa" layoutX="521.0" layoutY="78.0" mnemonicParsing="false" onAction="#pilihsiswaklik" text="Pilih Siswa" />
+      <Button fx:id="btnpilihmatkul" layoutX="521.0" layoutY="129.0" mnemonicParsing="false" onAction="#pilihmatkulklik" text="Pilih Matkul" />
    </children>
 </AnchorPane>

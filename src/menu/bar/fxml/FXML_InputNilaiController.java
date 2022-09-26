@@ -4,6 +4,7 @@
  */
 package menu.bar.fxml;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Date;
 import java.time.LocalDate;
@@ -14,7 +15,10 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
@@ -23,6 +27,8 @@ import javafx.scene.control.Slider;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -53,6 +59,10 @@ public class FXML_InputNilaiController implements Initializable {
     private Slider sldhadir;
     @FXML
     private Text txtsld;
+    @FXML
+    private Button btnpilihsiswa;
+    @FXML
+    private Button btnpilihmatkul;
 
     /**
      * Initializes the controller class.
@@ -60,8 +70,8 @@ public class FXML_InputNilaiController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        sldhadir.valueProperty().addListener(new ChangeListener<Number>(){
-            public void changed(ObservableValue<? extends Number>changed, Number oldVal, Number newVal){
+        sldhadir.valueProperty().addListener(new ChangeListener<Number>() {
+            public void changed(ObservableValue<? extends Number> changed, Number oldVal, Number newVal) {
                 txtsld.setText(String.valueOf(newVal.intValue()));
             }
         });
@@ -127,7 +137,50 @@ public class FXML_InputNilaiController implements Initializable {
             txtnpm.setDisable(true);
             txtkodemk.setDisable(true);
             datepick.requestFocus();
+            btnpilihmatkul.setDisable(true);
+            btnpilihsiswa.setDisable(true);
         }
     }
 
+    @FXML
+    private void pilihsiswaklik(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML_PilihSiswa.fxml"));
+            Parent root = (Parent) loader.load();
+            FXML_PilihSiswaController isidt = (FXML_PilihSiswaController) loader.getController();
+            Scene scene = new Scene(root);
+            Stage stg = new Stage();
+            stg.initModality(Modality.APPLICATION_MODAL);
+            stg.setResizable(false);
+            stg.setIconified(false);
+            stg.setScene(scene);
+            stg.showAndWait();
+            if (isidt.getHasil() == 1) {
+                txtnpm.setText(isidt.getNpmHasil());
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void pilihmatkulklik(ActionEvent event) {
+         try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML_PilihMatkul.fxml"));
+            Parent root = (Parent) loader.load();
+            FXML_PilihMatkulController isidt = (FXML_PilihMatkulController) loader.getController();
+            Scene scene = new Scene(root);
+            Stage stg = new Stage();
+            stg.initModality(Modality.APPLICATION_MODAL);
+            stg.setResizable(false);
+            stg.setIconified(false);
+            stg.setScene(scene);
+            stg.showAndWait();
+            if (isidt.getHasil() == 1) {
+                txtkodemk.setText(isidt.getKodemkHasil());
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
