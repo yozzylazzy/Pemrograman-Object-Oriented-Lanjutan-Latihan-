@@ -73,6 +73,25 @@ public class FXMLdisplayNilaiController implements Initializable {
             col.setCellValueFactory(new PropertyValueFactory<NilaiModel, String>("NPM"));
             tbnilai.getColumns().addAll(col);
 
+            col = new TableColumn("NamaSiswa");
+            col.setCellValueFactory(new PropertyValueFactory<NilaiModel, String>("namasiswa"));
+            tbnilai.getColumns().addAll(col);
+
+            col = new TableColumn("NamaMK");
+            col.setCellValueFactory(new PropertyValueFactory<NilaiModel, String>("namamk"));
+            tbnilai.getColumns().addAll(col);
+            tbnilai.setItems(data);
+
+            col = new TableColumn("SKS");
+            col.setCellValueFactory(new PropertyValueFactory<NilaiModel, String>("sks"));
+            tbnilai.getColumns().addAll(col);
+            tbnilai.setItems(data);
+
+            col = new TableColumn("Praktek");
+            col.setCellValueFactory(new PropertyValueFactory<NilaiModel, String>("praktek"));
+            tbnilai.getColumns().addAll(col);
+            tbnilai.setItems(data);
+
             col = new TableColumn("KodeMK");
             col.setCellValueFactory(new PropertyValueFactory<NilaiModel, String>("KodeMK"));
             tbnilai.getColumns().addAll(col);
@@ -88,16 +107,16 @@ public class FXMLdisplayNilaiController implements Initializable {
             col = new TableColumn("Hadir");
             col.setCellValueFactory(new PropertyValueFactory<NilaiModel, Integer>("Hadir"));
             tbnilai.getColumns().addAll(col);
-            
-            col=new TableColumn("NA");
+
+            col = new TableColumn("NA");
             col.setCellValueFactory(new PropertyValueFactory<NilaiModel, String>("Na"));
             tbnilai.getColumns().addAll(col);
             tbnilai.setItems(data);
-            
-            int total=0;
-            for(int i = 0; i<tbnilai.getItems().size();i++){
+
+            int total = 0;
+            for (int i = 0; i < tbnilai.getItems().size(); i++) {
                 NilaiModel n = tbnilai.getItems().get(i);
-                total+= n.getHadir();
+                total += n.getHadir();
             }
             txttotal.setText(String.valueOf(total));
         } else {
@@ -107,10 +126,11 @@ public class FXMLdisplayNilaiController implements Initializable {
         }
     }
 
-  @FXML
+    @FXML
     private void btnexitklik(ActionEvent event) {
-         btnexit.getScene().getWindow().hide();
+        btnexit.getScene().getWindow().hide();
     }
+
     @FXML
     private void btnawalklik(ActionEvent event) {
         tbnilai.getSelectionModel().selectFirst();
@@ -135,7 +155,7 @@ public class FXMLdisplayNilaiController implements Initializable {
         tbnilai.requestFocus();
     }
 
-     @FXML
+    @FXML
     private void btntambahklik(ActionEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML_InputNilai.fxml"));

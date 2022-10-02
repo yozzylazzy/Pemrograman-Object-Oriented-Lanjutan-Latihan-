@@ -16,7 +16,43 @@ public class NilaiModel {
     private double nilai;
     private int hadir;
     private char na;
+    private String namasiswa;
+    private String namamk;
+    private int sks;
+    private int praktek;
 
+    public int getSks() {
+        return sks;
+    }
+
+    public void setSks(int sks) {
+        this.sks = sks;
+    }
+
+    public int getPraktek() {
+        return praktek;
+    }
+
+    public void setPraktek(int praktek) {
+        this.praktek = praktek;
+    }
+
+    public String getNamamk() {
+        return namamk;
+    }
+
+    public void setNamamk(String namamk) {
+        this.namamk = namamk;
+    }
+
+    public String getNamasiswa() {
+        return namasiswa;
+    }
+
+    public void setNamasiswa(String namasiswa) {
+        this.namasiswa = namasiswa;
+    }
+   
     public String getNPM() {
         return NPM;
     }

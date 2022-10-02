@@ -31,7 +31,10 @@ public class DBNilai {
             Koneksi con = new Koneksi();
             con.bukaKoneksi();
             con.statement = con.dbKoneksi.createStatement();
-            ResultSet rs = con.statement.executeQuery("Select NPM, KodeMK, Tanggal, Nilai, Hadir from nilai");
+            ResultSet rs = 
+                    con.statement.executeQuery("Select n.NPM, Nama as namasiswa, n.KodeMK, tanggal, nilai, hadir, namaMK, sks, praktek "
+                            + " from nilai n inner join siswa s on n.npm=s.npm" +
+                            " inner join matakuliah m on n.KodeMK = m.KodeMK");
 
             int i = 1;
             while (rs.next()) {
@@ -41,6 +44,10 @@ public class DBNilai {
                 d.setTanggal(rs.getDate("Tanggal"));
                 d.setNilai(rs.getDouble("Nilai"));
                 d.setHadir(rs.getInt("Hadir"));
+                d.setNamasiswa(rs.getString("namasiswa"));
+                d.setNamamk(rs.getString("namaMK"));
+                d.setSks(rs.getInt("sks"));
+                d.setPraktek(rs.getInt("praktek"));
                 TableData.add(d);
                 i++;
             }
