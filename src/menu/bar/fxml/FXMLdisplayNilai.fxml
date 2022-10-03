@@ -7,7 +7,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="521.0" prefWidth="902.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menu.bar.fxml.FXMLdisplayNilaiController">
+<AnchorPane id="AnchorPane" prefHeight="690.0" prefWidth="902.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menu.bar.fxml.FXMLdisplayNilaiController">
    <children>
       <TableView fx:id="tbnilai" layoutY="70.0" prefHeight="400.0" prefWidth="902.0">
         <columns>
@@ -28,6 +28,13 @@
       <Button fx:id="btnsebelum" layoutX="720.0" layoutY="482.0" mnemonicParsing="false" onAction="#btnsebelumklik" text="Sebelum" />
       <Button fx:id="btnsesudah" layoutX="807.0" layoutY="482.0" mnemonicParsing="false" onAction="#btnsesudahklik" text="Sesudah" />
       <Button fx:id="btnexit" layoutX="825.0" layoutY="24.0" mnemonicParsing="false" onAction="#btnexitklik" text="EXIT" />
-      <TextField fx:id="txttotal" layoutX="339.0" layoutY="476.0" />
+      <TextField fx:id="txttotal" layoutX="339.0" layoutY="521.0" />
+      <TextField fx:id="txtbobot" layoutX="20.0" layoutY="604.0" />
+      <TextField fx:id="txtip" layoutX="339.0" layoutY="604.0" />
+      <TextField fx:id="txtavg" layoutX="640.0" layoutY="604.0" />
+      <Label layoutX="384.0" layoutY="488.0" text="Total Kehadiran :" />
+      <Label layoutX="61.0" layoutY="569.0" text="Total Bobot Nilai :" />
+      <Label layoutX="417.0" layoutY="569.0" text="Total IP :" />
+      <Label layoutX="666.0" layoutY="569.0" text="Total Rata-Rata Nilai :" />
    </children>
 </AnchorPane>

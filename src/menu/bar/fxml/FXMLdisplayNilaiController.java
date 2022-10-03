@@ -53,6 +53,12 @@ public class FXMLdisplayNilaiController implements Initializable {
     private Button btnexit;
     @FXML
     private TextField txttotal;
+    @FXML
+    private TextField txtbobot;
+    @FXML
+    private TextField txtip;
+    @FXML
+    private TextField txtavg;
 
     /**
      * Initializes the controller class.
@@ -114,10 +120,29 @@ public class FXMLdisplayNilaiController implements Initializable {
             tbnilai.setItems(data);
 
             int total = 0;
+            int bobot = 0, sks=0;
+            double nilaitotal = 0;
             for (int i = 0; i < tbnilai.getItems().size(); i++) {
                 NilaiModel n = tbnilai.getItems().get(i);
                 total += n.getHadir();
+                if (n.getNa() == 'a') {
+                    bobot += (4*n.getSks());
+                } else if (n.getNa() == 'b') {
+                    bobot += (3*n.getSks());
+                } else if (n.getNa() == 'c') {
+                    bobot += (2*n.getSks());
+                } else if (n.getNa() == 'd') {
+                    bobot += (1*n.getSks());
+                } else {
+                    bobot += 0;
+                }
+                sks += n.getSks();
+                nilaitotal += n.getNilai();
             }
+            double ip = bobot/sks;
+            txtbobot.setText(String.valueOf(bobot));
+            txtip.setText(String.valueOf(ip));
+            txtavg.setText(String.valueOf(nilaitotal/tbnilai.getItems().size()));
             txttotal.setText(String.valueOf(total));
         } else {
             Alert a = new Alert(Alert.AlertType.ERROR, "Data Kosong", ButtonType.OK);
